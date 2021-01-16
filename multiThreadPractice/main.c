@@ -2,7 +2,6 @@
 //  main.c
 //  multiThreadPractice
 //
-//  Created by Keith Guydo on 1/16/21.
 //
 
 // Required Libraries
