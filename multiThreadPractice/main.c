@@ -1,8 +1,8 @@
 //
 //  main.c
 //  multiThreadPractice
-//
-//
+//  Using this to help learn about developing
+//  programs with multiple threads
 
 // Required Libraries
 #include <stdio.h>    // Standard I/O Routines Library
@@ -16,8 +16,17 @@ void *customThreadFunction()
 {
     for (int i = 0; i < 15; i++)
     {
-        printf("I am a Custom Thread Function Created By Programmer.\n");
+        printf("CUSTOMTHREAD%d: I am a Custom Thread Function Created By Programmer.\n", i);
         sleep(1);
+        if (i == 5)
+        {
+            // By using pthread_exit, this function will stop running before the
+            // for loop iterates through all of its iterations.
+            // Not, the main thread created by the compiler continues to run until
+            // the program completes.
+            printf("I have finished my task.  Time to terminate using pthread_exit.\n");
+            pthread_exit(NULL);
+        }
     }
 
     return NULL;
@@ -35,8 +44,7 @@ int main()
      */
     if(!status)
     {
-        printf("Custom Created Successfully.\n");
-        
+        printf("Custom Created Successfully and starting to run.\n");
     }
     else
     {
@@ -47,7 +55,7 @@ int main()
     // Main Function For loop
     for(int i = 0; i < 15; i++)
     {
-        printf("I am the process thread created by compiler By default.\n");
+        printf("MAINTHREAD%d: I am the process thread created by compiler By default.\n", i);
         sleep(1);
     }
     
