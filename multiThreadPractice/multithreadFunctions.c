@@ -14,7 +14,7 @@
 /* Develop thread function to make the program multithreaded
  * Thread function must have a return type as a pointer
  */
-void* customThreadFunction(void* s)
+void* customThreadFunctionExit(void* s)
 {
     for (int i = 0; i < 15; i++)
     {
@@ -31,5 +31,25 @@ void* customThreadFunction(void* s)
         }
     }
 
+    return NULL;
+}
+
+void* customThreadFunctionEqual(void* s)
+{
+    printf("This is a custom function to test out pthread_equal.\n");
+    return NULL;
+}
+
+void *singleArgumentThreadFunction(void *input)
+{
+    printf("Another Thread: Hey, here is your input --> %s\n", (char *)input);
+    pthread_exit(NULL);
+}
+
+void *multipleArgumentsThreadFunction(void *contactInfo)
+{
+    printf("Name: %s", ((struct arguments*)contactInfo)->name);
+    printf("Email: %s", ((struct arguments*)contactInfo)->email);
+    printf("Phone: %s", ((struct arguments*)contactInfo)->phone);
     return NULL;
 }
