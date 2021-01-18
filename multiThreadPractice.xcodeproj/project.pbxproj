@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58D6679425B3088B006B02BB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 58D6679325B3088B006B02BB /* main.c */; };
+		58D6679D25B4559A006B02BB /* multithreadFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 58D6679C25B4559A006B02BB /* multithreadFunctions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		58D6679025B3088B006B02BB /* multiThreadPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = multiThreadPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D6679325B3088B006B02BB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		58D6679B25B4559A006B02BB /* multithreadFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = multithreadFunctions.h; sourceTree = "<group>"; };
+		58D6679C25B4559A006B02BB /* multithreadFunctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = multithreadFunctions.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				58D6679325B3088B006B02BB /* main.c */,
+				58D6679B25B4559A006B02BB /* multithreadFunctions.h */,
+				58D6679C25B4559A006B02BB /* multithreadFunctions.c */,
 			);
 			path = multiThreadPractice;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58D6679425B3088B006B02BB /* main.c in Sources */,
+				58D6679D25B4559A006B02BB /* multithreadFunctions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
